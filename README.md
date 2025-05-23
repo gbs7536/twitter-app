@@ -1,101 +1,87 @@
 # React Twitter
 
-- React, Firebase를 이용한 실시간 트위터 프로젝트 입니다.
-- URL: [https://fastcampus-react-twitter.vercel.app/]([https://fastcampus-react-twitter.vercel.app/](https://twitter-app-kappa.vercel.app/))
-- [Pull Request](https://github.com/gbs7536/twitter-app) 탭에서 각 기능별 코드를 확인할 수 있습니다.
+* React와 Firebase를 활용한 **실시간 트위터 클론 프로젝트**입니다.
+* URL: [https://twitter-app-kappa.vercel.app/](https://twitter-app-kappa.vercel.app/)
+* [Pull Request](https://github.com/gbs7536/twitter-app/pulls?q=is%3Apr+is%3Aclosed) 탭에서 기능별 코드 변경 내역을 확인할 수 있습니다.
 
 <br />
 
-# 프로젝트 설명
+# 프로젝트 개요
 
-## 주요 기능
+## 🎯 주요 기능
 
-- 상태관리와 실시간 데이터 업데이트 이해
-- 실시간 업데이트와 푸시 알림
-- 팔로우 및 소셜 기능
-- 타임라인 및 필터링
+* 실시간 트윗 스트림 및 타임라인
+* 트윗 작성, 편집, 삭제
+* 이미지 업로드 기능 (Firebase Storage)
+* 로그인/회원가입 및 OAuth 소셜 로그인 (Google, Github)
+* 사용자 프로필 및 좋아요/작성한 글 모아보기
+* 해시태그 생성 및 검색 기능
+* 팔로우/언팔로우 기능
+* 댓글 및 좋아요 기능
+* 다국어 처리 (영어/한국어)
 
-## 앱 구조
+---
 
-- (create-react-app) SPA
-- 반응형 웹
-- 미디어쿼리
+## ⚙️ 기술 스택
 
-## 상태관리
+* **Frontend**: React, React Router, SCSS
+* **상태관리**: Recoil, React Context API
+* **Backend**: Firebase Auth, Firestore, Firebase Storage
+* **배포**: Vercel (수동 배포)
 
-- Recoil, React Context API
-- 권한관리
-- 다국어처리 기능
+---
 
-## 애니메이션 & 스타일링
+## 🧱 앱 구조
 
-- SCSS 사용
-- 모바일 대응 스타일링 (미디어 쿼리)
+* Create React App 기반의 SPA
+* 반응형 웹 구현 (미디어 쿼리 적용)
+* 컴포넌트 기반 구조: 레이아웃, 폼, 게시글 박스, 탭, 프로필 등
 
-## 배포
+---
 
-- Vercel (수동 배포)
+## 🛠 기타 구현/학습 내용
 
-## 컴포넌트
+* 전역 상태관리 (Recoil) 및 다국어 처리
+* 폴더 구조 설계 및 프로젝트 초기 세팅
+* React Hooks 활용: `useEffect`, `useState`, `useContext`, `useCallback`
+* 실시간 동기화(`onSnapshot`)를 이용한 Firestore 연동
+* SCSS를 활용한 스타일링 및 모바일 대응
 
-- 레이아웃, 폼, 게시글 박스, 프로필, 탭 등
+---
 
-## API
+## 📌 구현 기능 상세
 
-- Firebase storage를 이용한 이미지 업로드
-- Firebase auth를 이용한 사용자 인증
-- firestore를 이용한 실시간 데이터 동기화 & 저장 & 관리 (onSnapshot 동기화 개념 사용)
+1. **홈 타임라인**
 
-## 사용 스택
+   * Firestore를 통한 실시간 트윗 표시
+   * React 컴포넌트를 이용한 리스트 구성
 
-- React
-- Firebase(로그인, 보안, 통신)
-- SCSS
-- Recoil
-- Vercel
+2. **트윗 작성/편집 페이지**
 
-## 기타 학습 개념
+   * 이미지 업로드 및 글 작성/수정/삭제
+   * Firebase Storage와 연동
 
-- 폴더 구조
-- CRA 이용 프로젝트 세팅
-- React hooks(useEffect, useState, useContext, useCallback)
-- React-router-dom 라우터
-- Recoil를 이용한 전역 상태관리
-- SCSS 스타일링
+3. **회원가입 및 SNS 로그인**
 
-<br />
+   * 이메일/비밀번호 회원가입
+   * Google, Github 로그인 (OAuth)
 
-# 구현 기능
+4. **프로필 페이지**
 
-1. 홈 타임라인
-- firestore 실시간 트위터 보여주기
-- React 컴포넌트로 트위터 표시
+   * 유저 정보 및 작성 글, 좋아요 글 모아보기
+   * 프로필 이미지 수정 기능 포함
 
-2. 트윗 작성/편집 페이지
-- 이미지 업로드 CRUD
-- 글 CRUD
+5. **해시태그 기능**
 
-3. SNS 로그인/회원가입 기능
-- 기본 로그인/회원가입 기능
-- SNS 로그인/회원가입 기능 (OAuth)
+   * 글 작성 시 해시태그 자동 생성
+   * 해시태그 기반 필터링 및 검색 탭 제공
 
-4. 사용자 개별 프로필 페이지
-- 마이페이지와 같은 프로필 페이지 작업
-- 좋아요 게시글 모아보기
-- 프로필 이미지 수정
+6. **기타 기능**
 
-5. 해시태그 생성 및 해시태그 검색 페이지
-- 글 작성 시 해시태그 생성 / 수정 기능
-- 해시태그만 모아서 검색해볼 수 있는 탭 구현
+   * 댓글 작성/삭제
+   * 좋아요 추가/제거
+   * 팔로우/언팔로우 기능
+   * 다국어 지원 (EN/KO)
+   * 반응형 웹
 
-6. Recoil를 이용한 전역 상태관리
-- 다국어 처리 기능 작업
-
-
-## 그 외 기능
-
-1. 다국어 처리
-2. 좋아요
-3. 댓글
-4. 팔로잉/팔로우
-5. 반응형 웹
+---
