@@ -2,7 +2,6 @@
 
 * React와 Firebase를 활용한 **실시간 트위터 프로젝트**입니다.
 * URL: [https://twitter-app-kappa.vercel.app/](https://twitter-app-kappa.vercel.app/)
-* [Pull Request](https://github.com/gbs7536/twitter-app/pulls?q=is%3Apr+is%3Aclosed) 탭에서 기능별 코드 변경 내역을 확인할 수 있습니다.
 
 <br />
 
